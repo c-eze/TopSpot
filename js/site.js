@@ -5,14 +5,21 @@ function getValue () {
     
     let userString = document.getElementById("userString").value;
 
-    let revString = reverseString(userString);
+    let returnObj = checkForPalindrome(userString);
 
-    displayString(revString);
+    displayString(returnObj);
 }
 
-//Reverse the string
-//logic function
-function reverseString(userString) {
+//process and check the string for a palindrome
+//logic function 
+function checkForPalindrome (userString) {
+    //convert string to lower case
+    userString = userString.toLowerCase();
+
+    //remove spaces and special characters
+    let regex = /[^a-z0-9]/gi;
+    userString =userString.replace(regex, "");  
+
     let revString = [];
 
     //reverse a string using a for loop
@@ -20,14 +27,28 @@ function reverseString(userString) {
         revString += userString[index];        
     }
 
-    return revString;
+    let returnObj = {};
+
+    //compare user string to reverse string
+    if (revString == userString) {
+        returnObj.msg = "Well done! You entered a palindrome!"
+    }
+    else {
+        returnObj.msg = "Sorry! You did not enter a palindrome"
+    }
+
+    returnObj.reversed = revString;
+
+    return returnObj;
 }
 
-//Display the reversed string to the user
+//Display the results to the user
 //View Function
-function displayString(revString) {
+function displayString(returnObj) {
+    
     //write to the page
-    document.getElementById("msg").innerHTML = `Your phrase reversed is: ${revString}`;
+    document.getElementById("alertHeader").innerHTML = returnObj.msg;
+    document.getElementById("msg").innerHTML = `Your phrase reversed is: ${returnObj.reversed}`;
 
     //show the alert box
     document.getElementById("alert").classList.remove("invisible");
