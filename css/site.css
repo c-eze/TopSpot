@@ -1,7 +1,7 @@
 :root {
     /* colors */
     --primary-color: #1d5888;
-    --secondary-color: #FF3131;
+    --secondary-color: #FF7445;
     --heading-bg-color: #e2e3e5; /* Bootstrap Secondary Sub Color */
     --heading-color: #6c757d; 
     --dark-color: #292929;
@@ -25,7 +25,7 @@
 }
 
 .logoFont {
-    font-family: "Teko", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;

@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Chikere Ezekannagha</title>
+    <title>Top Spot: A Coding Project By Chikere Ezekannagha</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,11 +12,11 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
- 
-    <!-- Google Fonts for Teko -->
+
+    <!-- Google Fonts for Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
 
     <link href="/css/site.css" rel="stylesheet"> 
     <link rel="icon" type="image/png" href="/img/favicon.ico">
@@ -27,7 +27,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand logoFont" href="#"><img src="/img/favicon-32x32.png" class="d-inline-block align-text-top" 
-            width="32" height="30"> APP NAME</a>
+            width="32" height="30"> TOP SPOT</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
                     <a class="nav-link" href="code.html">The Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/c-eze/TopSpot">Git Repo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="#">About</a>
@@ -58,27 +58,22 @@
     <div class="container mt-5">
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col col-lg-4 border-end border-2">
-                <h1>App Name</h1>
+                <h1 class="logoFont">TOP SPOT</h1>
                 <p class="lead">
-                    A JavaScript coding exercise using loops. 
+                    Top Spot is a palindrome. A palindrome is a word or phrase that reads the same backward as forward. With this program you can determine if a word or phrase entered is a palindrome.  
                 </p>
                 <h2 class="mt-5">Instructions</h2>
-                <p>Enter a starting value and a ending value. Press the button and the values will appear.</p>
+                <p class="pb-4">Enter a word, sentence, or phrase. Press the button to check to see if the word or phrase is a palindrome.</p>
             </div>
             <div class="col col-lg-8">
                 <div>
-                    <h5>Enter Values</h5>
+                    <h5>Enter a word, sentence, or phrase</h5>
                     <form class="row gy-2 gx-3">
                         <div class="col">
-                            <input id="startValue" type="number" class="form-control" placeholder="Start Value" 
-                                value="0" aria-label="Start Value">
-                        </div>
-                        <div class="col">
-                            <input id="endValue" type="number" class="form-control" placeholder="End Value" 
-                                value="100" aria-label="End Value">
-                        </div>
-                        <div class="col-12 d-flex justify-content-end">
-                            <button id="btnSubmit" type="button" class="btn btn-lg btnColor">Display the Evens</button>
+                            <input id="userString" type="text" class="form-control" placeholder="top spot" aria-label="Enter A String">
+                        </div> 
+                        <div class="col-12 d-flex justify-content-start">
+                            <button id="btnSubmit" type="button" class="btn btn-lg bg-dark text-white">Submit</button>
                         </div>
                     </form>
                     <h4 class="mt-5 border-bottom border-2">Results</h4>
