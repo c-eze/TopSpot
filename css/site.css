@@ -10,18 +10,15 @@
 
 .highlightme { background-color:var(--secondary-color) }
 
+p span,
+ul span {
+    background-color: #e2e3e5;
+    padding: 0 .5rem;
+}
+
 .btnColor {
     background-color: var(--secondary-color);
     color: white;
-}
-
-.odd {
-    font-weight: 100;
-}
-
-.even {
-    font-weight: bold;
-    font-size: large;
 }
 
 .logoFont {

@@ -57,21 +57,93 @@
 <!-- === Main Section === -->
 <main class="flex-shrink-0">
     <div class="container py-4 px-5 mt-5">
-        <h1 class="border-1 border-bottom border-dark">The Code for APP NAME</h1>
+        <h1 class="border-1 border-bottom border-dark">The Code for TOP SPOT</h1>
         <div class="row row-cols-1 row-cols-lg-2">
             <div class="col-lg-8">
                 <pre class="line-numbers"><code class="language-javascript">
-                    //Call Hello World
-                    function HelloWorld() {
-                        alert("Hello World");
+                    //Get the string from the page 
+                    //controller function
+                    function getValue () {
+                        document.getElementById("alert").classList.add("invisible");
+                        
+                        let userString = document.getElementById("userString").value;
+                    
+                        let returnObj = checkForPalindrome(userString);
+                    
+                        displayString(returnObj);
+                    }
+                    
+                    //process and check the string for a palindrome
+                    //logic function 
+                    function checkForPalindrome (userString) {
+                        //convert string to lower case
+                        userString = userString.toLowerCase();
+                    
+                        //remove spaces and special characters
+                        let regex = /[^a-z0-9]/gi;
+                        userString =userString.replace(regex, "");  
+                    
+                        let revString = [];
+                    
+                        //reverse a string using a for loop
+                        for (let index = userString.length - 1; index >= 0; index--) {
+                            revString += userString[index];        
+                        }
+                    
+                        let returnObj = {};
+                    
+                        //compare user string to reverse string
+                        if (revString == userString) {
+                            returnObj.msg = "Well done! You entered a palindrome!"
+                        }
+                        else {
+                            returnObj.msg = "Sorry! You did not enter a palindrome"
+                        }
+                    
+                        returnObj.reversed = revString;
+                    
+                        return returnObj;
+                    }
+                    
+                    //Display the results to the user
+                    //View Function
+                    function displayString(returnObj) {
+                        
+                        //write to the page
+                        document.getElementById("alertHeader").innerHTML = returnObj.msg;
+                        document.getElementById("msg").innerHTML = `Your phrase reversed is: ${returnObj.reversed}`;
+                    
+                        //show the alert box
+                        document.getElementById("alert").classList.remove("invisible");
                     }
                 </code>
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                <p>The Code is structured in three functions.</p>
+                <h5>getValue</h5>
+                <p>
+                    <code>getValue</code> is a controller function that gets the user's word or phrase from the App 
+                    page, processes the string, and then displays the result back to the user. 
+                </p>
+                <h5>checkForPalindrome</h5>
+                <p>
+                    <code>checkForPalindrome</code> is a logic function that processes and checks to see if a string
+                    is actually a palindrome. It has only one parameter that brings in the value of the user string 
+                    from the <code>getValue</code> function. The function
+                    first converts the string into lower case. It then removes spaces and special characters from the
+                    string using a javascript regular expression.  After that, it reverses the string using a 
+                    <span>for-loop</span> and saves it character by character into a string array. It compares the user string
+                    and reversed string to see if they are equal. A message is generated based on this comparision. Finally, 
+                    the message along with the reversed string are stored into a JavaScript Object, and passed out of the
+                    function. 
+                </p>
+                <h5>displayString</h5>
+                <p>
+                    <code>displayString</code> is a view function that takes in a JavaScript object from the 
+                    <code>getValue</code> function. The object contains the results message and the reversed string 
+                    which are written in the alert box on the page. The alert box is then revealed to the user. 
+                </p>
             </div>
         </div>
     </div>
