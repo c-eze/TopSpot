@@ -1,6 +1,6 @@
-<img src="/img/logo.svg" alt="logo" width="25%" height="auto">
+<img src="/img/Logo.svg" alt="logo" width="25%" height="auto">
 
-# App Name - A Coding Challenge
+# Top Spot - A Coding Challenge
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ## Overview
 
-App Name is a JavaScript coding exercise using loops. With this program you can display numbers in a given range with the even numbers in **BOLD.**
+Top Spot is a palindrome. A palindrome is a word or phrase that reads the same backward as forward. With this program you can determine if a word or phrase entered is a palindrome.
 
 ## Objectives
 
@@ -45,32 +45,41 @@ Mobile Screenshot:
 
 ## Lessons Learned
 
-1. Javascript regular expression
+1. Use JavaScript regular expressions for searching patterns that can be used in text search and text replace operations. This eliminated need for multiple lines of code to search and replace characters.  
 
     ```js
-    //Call Hello World
-    function HelloWorld() {
-        alert("Hello World");
-    }
+    //remove spaces and special characters
+    let regex = /[^a-z0-9]/gi;
+    userString =userString.replace(regex, ""); 
     ```
 
-2. Javascript objects 
+2. Use JavaScript objects as a container to hold multiple properties. This allows for easier passing of information between functions. 
 
-3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+    ```js
+    let returnObj = {};
 
-4. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    //compare user string to reverse string
+    if (revString == userString) {
+        returnObj.msg = "Well done! You entered a palindrome!"
+    }
+    else {
+        returnObj.msg = "Sorry! You did not enter a palindrome"
+    }
+
+    returnObj.reversed = revString;
+
+    return returnObj; 
+    ``` 
 
 ## Recommendations
 
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+1. Show previously entered strings along with their statuses in a running history/list.  
 
-2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+2. Allow the user to enter multiple different strings at once and check them simultaneously to see if they are palindromes.
 
-3. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-
-4. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Useful Resources
 
 - [W3 Schools - JavaScript Regular Expressions](https://www.w3schools.com/js/js_regexp.asp/)
+- [W3 Schools - JavaScript Objects](https://www.w3schools.com/js/js_objects.asp)
 - [MDN Web Docs - Working With Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
