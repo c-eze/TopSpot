@@ -80,6 +80,6 @@ Mobile Screenshot:
 
 ## Useful Resources
 
-- [W3 Schools - JavaScript Regular Expressions](https://www.w3schools.com/js/js_regexp.asp/)
+- [W3 Schools - JavaScript Regular Expressions](https://www.w3schools.com/js/js_regexp.asp)
 - [W3 Schools - JavaScript Objects](https://www.w3schools.com/js/js_objects.asp)
 - [MDN Web Docs - Working With Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
